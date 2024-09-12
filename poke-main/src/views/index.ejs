@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .janela_tela_p {
+        background-color: white;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        margin: 15px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgb(66, 66, 66);
+       
+    }
+    
+    
+    
+    .butao {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+</style>
+</head>
+<body>
+    <h1>PokeDex Unicesumar</h1>
+    <div class="container">
+        <% results.forEach(pokemon => { %>
+        <div class="janela_tela_p">
+            <p>Nome: <%= pokemon.name %></p>
+            <button class="butao">
+                <a href="/pokemon/<%= pokemon.name %>">Clique aqui</a>
+            </button>
+        </div>
+        <% }) %>
+    </div>
+</body>
+</html>
